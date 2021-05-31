@@ -1,1 +1,3 @@
-# Empirical comparisons between AI and BW geometries for Riemannian optimization on SPD matrices
+# Riemannian optimization on SPD matrices with BW geometry
+
+An empirical comparison between the Affine-Invariant and Bures-Wasserstein geometries for Riemannian optimization on symmetric positive definite matrices.
