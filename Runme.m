@@ -4,6 +4,10 @@ cd tests;
 addpath(genpath(pwd));
 cd ..;
 
+cd thirdpartytools;
+addpath(genpath(pwd));
+cd ..;
+
 % Experiments
 % weighted least squares
 test_linear_loss()
