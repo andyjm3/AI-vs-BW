@@ -153,7 +153,7 @@ function [] = test_lyapunov_loss()
     fs = 25;
     
     if strcmp(solver_choice, 'TR')
-        h2 = figure(2);
+        h2 = figure();
         plot(221);
         semilogy(cumsum([info_BW.numinner]), [info_BW.disttosol], '-o', 'color', 'b', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
         semilogy(cumsum([info_AI.numinner]), [info_AI.disttosol], '-+', 'color', 'r', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
@@ -166,10 +166,10 @@ function [] = test_lyapunov_loss()
         xtickformat(ax1,'%,5.0g');
         xlabel('Inner iterations (cumsum)', 'fontsize', fs);
         ylabel('Distance to solution', 'fontsize', fs);
-        legend('BW', 'AI', 'LE', 'Location', 'northeast');
+        legend('BW', 'AI', 'LE');
         
     else
-        h2 = figure(2);
+        h2 = figure();
         plot(221);
         semilogy([info_BW.iter], [info_BW.disttosol], '-o', 'color', 'b', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
         semilogy([info_AI.iter], [info_AI.disttosol], '-+', 'color', 'r', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
@@ -181,6 +181,6 @@ function [] = test_lyapunov_loss()
         set(h2,'Position',[100 100 600 500]);
         xlabel('Iterations', 'fontsize', fs);
         ylabel('Distance to solution', 'fontsize', fs);
-        legend('BW', 'AI', 'LE', 'Location', 'northeast');
+        legend('BW', 'AI', 'LE');
     end
 end
