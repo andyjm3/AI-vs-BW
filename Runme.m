@@ -1,17 +1,5 @@
 addpath(pwd);
 
-cd thirdpartytools;
-addpath(genpath(pwd));
-cd ..;
-
-cd auxiliary/;
-addpath(genpath(pwd));
-cd ..;
-
-cd thirdpartytools;
-addpath(genpath(pwd));
-cd ..;
-
 cd tests;
 addpath(genpath(pwd));
 cd ..;
