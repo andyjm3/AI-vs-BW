@@ -123,7 +123,7 @@ function [] = test_linear_loss()
     fs = 25;
      
     if strcmp(solver_choice, 'TR') 
-        h2 = figure(2);
+        h2 = figure();
         plot(221);
         semilogy(cumsum([info_BW.numinner]), [info_BW.disttosol], '-o', 'color', 'b', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
         semilogy(cumsum([info_AI.numinner]), [info_AI.disttosol], '-+', 'color', 'r', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
@@ -136,7 +136,7 @@ function [] = test_linear_loss()
         ylabel('Distance to solution', 'fontsize', fs);
         legend('BW', 'AI', 'LE');        
     else
-        h2 = figure(2);
+        h2 = figure();
         plot(221);
         semilogy([info_BW.iter], [info_BW.disttosol], '-o', 'color', 'b', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
         semilogy([info_AI.iter], [info_AI.disttosol], '-+', 'color', 'r', 'LineWidth', lw, 'MarkerSize',ms);  hold on;
