@@ -165,6 +165,7 @@ function [] = test_trace_regression()
         set(h2,'Position',[100 100 600 500]);
         xlabel('Inner iterations (cumsum)', 'fontsize', fs);
         ylabel('Distance to solution', 'fontsize', fs);
+        legend('BW', 'AI', 'LE');
         
     else
         h2 = figure();
@@ -179,5 +180,6 @@ function [] = test_trace_regression()
         set(h2,'Position',[100 100 600 500]);
         xlabel('Iterations', 'fontsize', fs);
         ylabel('Distance to solution', 'fontsize', fs);
+        legend('BW', 'AI', 'LE');
     end 
 end
