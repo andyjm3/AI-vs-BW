@@ -150,3 +150,4 @@ function [] = test_linear_loss()
         ylabel('Distance to solution', 'fontsize', fs);
         legend('BW', 'AI', 'LE');
     end
+end
