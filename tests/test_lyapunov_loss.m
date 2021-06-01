@@ -1,4 +1,4 @@
-function [infos_AI, infos_BW] = test_lyapunov_loss()
+function [] = test_lyapunov_loss()
     
 % AXM + MXA = C
 % A and M are SPD > 0.
