@@ -146,7 +146,6 @@ function [] = test_lyapunov_loss()
     end    
 
     
-    
     % plot
     lw = 4.0;
     ms = 7.0;
@@ -183,4 +182,15 @@ function [] = test_lyapunov_loss()
         ylabel('Distance to solution', 'fontsize', fs);
         legend('BW', 'AI', 'LE');
     end
+    
+    % helper function
+    function A = sp_laplace(n)
+        % Generates sparse 2D discrete Laplacian matrix of dimension n^2.
+        r = zeros(1,n); %
+        r(1:2) = [2, -1];
+        T = toeplitz(r);
+        E = speye(n); %
+        A = kron(T, E) + kron(E, T);
+    end
+    
 end
